@@ -17,7 +17,7 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          <i className="fas fa-server"></i> DevOps Portfolio
+          <i className="fas fa-server"></i> My DevOps Portfolio
         </Link>
 
         <button 

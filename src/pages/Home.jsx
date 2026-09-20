@@ -14,7 +14,7 @@ export default function Home() {
               View My Work
             </Link>
             <Link to="/contact" className="btn btn-secondary">
-              Get In Touch
+              Contact Me
             </Link>
           </div>
         </div>
