@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to My DevOps Portfolio</h1>
+          <h1 className="hero-title">Welcome to My DevOps Portfolio V1</h1>
           <p className="hero-subtitle">Specializing in Cloud Infrastructure, Containerization & CI/CD Pipelines</p>
           <div className="hero-buttons">
             <Link to="/projects" className="btn btn-primary">
