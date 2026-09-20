@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "test": "vitest run",
     "preview": "vite preview",
     "serve": "node server.js"
   },
@@ -17,6 +18,10 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
     "terser": "^5.51.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "jsdom": "^27.0.0",
+    "vitest": "^3.2.4"
   }
 }
