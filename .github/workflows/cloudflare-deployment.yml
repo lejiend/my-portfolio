@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - cicd/automatic-deployment-on-merge
   pull_request:
     branches: 
       - master  
