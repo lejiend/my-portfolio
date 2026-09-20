@@ -11,5 +11,8 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser'
+  },
+  test: {
+    environment: 'jsdom'
   }
 })
