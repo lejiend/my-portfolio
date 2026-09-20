@@ -1,16 +1,17 @@
-name: Cloudflare Deployment
+name: Building the CI
 
 on:
   push:
     branches:
+      - development
       - master
   pull_request:
     branches: 
       - master  
 
+
 jobs: 
-  build:
-    environment: development
+  bulding-the-continous-integration:
     runs-on: ubuntu-latest
     steps: 
       - name: Check out repository 
@@ -25,14 +26,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run unit tests
+        run: npm test
+
       - name: Build application 
         run: npm run build
-
-      - name: Deploy to Cloudflare Pages 
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=my-portfolio
-
       
+      - name: Upload dist directory to artifcat
+        uses: actions/upload-artifact@v4 
+        with: 
+          name: portfolio-dist
+          path: dist
+
+  
